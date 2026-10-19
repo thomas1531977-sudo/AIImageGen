@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="12dp"
+    android:background="#F5F5F5">
+    
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:text="AI Image Generator" android:textSize="20sp" android:textStyle="bold"
+        android:textColor="#333"/>
+        
+    <EditText android:id="@+id/etPrompt"
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:hint="اكتب الوصف هنا (Prompt)..."
+        android:minLines="2" android:gravity="top"
+        android:inputType="textMultiLine"/>
+
+    <Button android:id="@+id/btnGenerate"
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:text="توليد الصورة"/>
+
+    <ProgressBar android:id="@+id/progressBar"
+        android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:layout_gravity="center" android:visibility="gone"/>
+
+    <ImageView android:id="@+id/imageView"
+        android:layout_width="match_parent" android:layout_height="0dp"
+        android:layout_weight="1" android:scaleType="fitCenter"
+        android:layout_marginTop="10dp"/>
+        
+    <TextView android:id="@+id/tvStatus"
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:text="جاهز" android:textColor="#666" android:textSize="12sp"/>
+</LinearLayout>
